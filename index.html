@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Responsive Figma Embed</title>
+  <meta charset="UTF-8" />
+  <title>Figma Prototype Embed</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    body, html {
+      margin: 0; padding: 0; height: 100%;
       background: #f9f9f9;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
-
     .iframe-container {
       position: relative;
       width: 90%;
-      max-width: 1000px;
+      max-width: 900px;
       padding-top: 56.25%; /* 16:9 aspect ratio */
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
     }
-
     .iframe-container iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       border: none;
@@ -34,9 +32,9 @@
 <body>
   <div class="iframe-container">
     <iframe
-      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/hAWpbC09dPrldnFxsHvzs3/Portfolio-website-template---Edit-your-portfolio-and-get-your-website-live--Community---Copy"
-      allowfullscreen>
-    </iframe>
+      src="https://embed.figma.com/proto/hAWpbC09dPrldnFxsHvzs3/Portfolio-website-template---Edit-your-portfolio-and-get-your-website-live--Community---Copy-?node-id=176-2329&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=176%3A2329&show-proto-sidebar=1&embed-host=share"
+      allowfullscreen
+      ></iframe>
   </div>
 </body>
 </html>
