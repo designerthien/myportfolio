@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lim Geomatics | DesignerThien</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fff;
+    }
+    header {
+      background: url('images/hero-bg.png') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+    section.feature {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      align-items: center;
+      gap: 2rem;
+    }
+    section.feature:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: #f9f9f9;
+    }
+    .feature img {
+      flex: 1 1 40%;
+      max-width: 400px;
+      height: auto;
+      background-color: #eee;
+      border: 1px dashed #ccc;
+    }
+    .feature-content {
+      flex: 1 1 50%;
+    }
+    .feature-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .feature-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        height: 70vh;
+      }
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      section.feature {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-content">
+      <h1>Lim Geomatics</h1>
+      <p>Geospatial Solutions for Next Generation Forestry</p>
+    </div>
+  </header>
+
+  <section class="feature">
+    <img src="images/placeholder1.png" alt="Stratus Screenshot" />
+    <div class="feature-content">
+      <h2>Stratus</h2>
+      <p>A cloud-based forestry management and data analytics platform designed to help land managers optimize their operations.</p>
+    </div>
+  </section>
+
+  <section class="feature">
+    <img src="images/placeholder2.png" alt="Attestra Screenshot" />
+    <div class="feature-content">
+      <h2>Attestra</h2>
+      <p>Real-time geospatial tools to assist in on-the-ground decision making and stakeholder communication in natural resource industries.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DesignerThien. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple fade-in on scroll
+    const features = document.querySelectorAll('.feature');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.3 });
+
+    features.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(50px)';
+      el.style.transition = 'all 0.6s ease-out';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
