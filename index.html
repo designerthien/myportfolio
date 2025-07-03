@@ -2,27 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Figma Portfolio Embed</title>
+  <title>Responsive Figma Embed</title>
   <style>
     body {
       margin: 0;
-      background: #f8f8f8;
+      padding: 0;
+      background: #f9f9f9;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
-    iframe {
+
+    .iframe-container {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
 </head>
 <body>
-  <iframe
-    width="800"
-    height="450"
-    src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/hAWpbC09dPrldnFxsHvzs3/Portfolio-website-template---Edit-your-portfolio-and-get-your-website-live--Community---Copy"
-    allowfullscreen>
-  </iframe>
+  <div class="iframe-container">
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/hAWpbC09dPrldnFxsHvzs3/Portfolio-website-template---Edit-your-portfolio-and-get-your-website-live--Community---Copy"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
